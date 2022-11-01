@@ -1,5 +1,5 @@
 const Sneakers = require('../Sneaker');
-const Inscription = require('../Inscription')
+const Inscription = require('../Inscription');
 const Comment = require('../Comment');
 
 const routes = (router) => {
@@ -11,6 +11,7 @@ const routes = (router) => {
     router.post('/inscription/', Inscription.inscription);
     router.post('/login/', Inscription.login);
     router.post('/sneakers/:id', Comment.PostComment);
+    router.post('/sneakers/:id', Comment.GetComment);
 
 };
 
