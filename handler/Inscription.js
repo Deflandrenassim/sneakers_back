@@ -1,5 +1,5 @@
 const bcrypt = require('bcrypt');
-const modelInscription = require('../models/Inscription');
+const modelInscription = require('../models/User');
 
 
 const inscription = (req, res) => {

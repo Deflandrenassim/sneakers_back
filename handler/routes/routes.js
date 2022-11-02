@@ -1,6 +1,7 @@
 const Sneakers = require('../Sneaker');
 const Inscription = require('../Inscription');
 const Comment = require('../Comment');
+const Connexion = require('../Connexion');
 
 const routes = (router) => {
     router.get('/sneakers/', Sneakers.readSneakers);
@@ -12,7 +13,7 @@ const routes = (router) => {
     router.post('/login/', Inscription.login);
     router.post('/sneakers/:id', Comment.PostComment);
     router.post('/sneakers/:id', Comment.GetComment);
-
+    router.get('/login/', Connexion.Authentification);
 };
 
 module.exports.routes = routes;

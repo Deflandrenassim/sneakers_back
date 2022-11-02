@@ -1,7 +1,7 @@
 const moongoose  = require('../mongodb');
 const uniqueValidator = require('mongoose-unique-validator');
 
-const inscription = moongoose.Schema({
+const User = moongoose.Schema({
     
     lastName: {type: String, required: true},
     firstName: {type: String, required: true},
@@ -11,6 +11,6 @@ const inscription = moongoose.Schema({
     passwordDouble: {type: String, required: true},
 
 })
-inscription.plugin(uniqueValidator);
+User.plugin(uniqueValidator);
 
-module.exports = moongoose.model('inscription', inscription);
+module.exports = moongoose.model('users', User);
