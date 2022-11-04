@@ -46,7 +46,6 @@ const readUpdateSneakers = (req, res) => {
 const readbyIdSneakers = (req,res) => {
     Sneakers.findOne({ id : req.params.id})
     .then(( commentaireId ) => res.status(200).json(commentaireId))
-   //console.log(req.params.id + '--------');
 };
 const deleteSneakers = (req, res) => {
     Sneakers.deleteOne({id : req.params.id})

@@ -8,7 +8,7 @@ const User = moongoose.Schema({
     mail: {type: String, required: true, unique: true},
     number: {type: Number, required: true},
     password: {type: String, required: true},
-    passwordDouble: {type: String, required: true},
+   
 
 })
 User.plugin(uniqueValidator);
