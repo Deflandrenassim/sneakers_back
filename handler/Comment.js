@@ -2,6 +2,7 @@ const Comment = require('../models/Comment');
 
 const PostComment = (req, res) => {
     const { comment } = req.body;
+    console.log(comment);
     const postComment = new Comment({
         comment,
     })
@@ -11,8 +12,9 @@ const PostComment = (req, res) => {
 }
 
 const GetComment = (req, res) => {
+    console.log(res);
     Comment.find()
-        .then((commentaire) => res.status(200).json(commentaire))
+    .then(( comments ) => res.status(200).json(comments));
 }
 
 module.exports.PostComment = PostComment;
